@@ -153,29 +153,8 @@
 
         <?php echo generatePagination($queryResult); ?>
         <div class="products-wrapper">
-            <!-- <div class="products-layout"> -->
-                <!-- <div class="product 1">
-                    <img src="cover/pr1" data="pr1" alt="pr1">
-                    <div class="box">
-                        <div class="cart">add to Cart</div>
-                        <div class="price">$1</div>
-                    </div>
-                </div> -->
-                <?php //echo displayBook("28", "1"); ?>
-                <?php //echo displayBook("28", "2"); ?>
-                <?php //echo displayBook("28", "3"); ?>
-                <?php //echo displayBook("28", "4"); ?>
-                <?php //echo displayBook("28", "5"); ?>
-                <?php //echo displayBook("28", "6"); ?>
-                <?php //echo displayBook("29", "7"); ?>
-                <?php //echo displayBook("28", "8"); ?>
-                <?php //echo displayBook("28", "9"); ?>
-                <?php //echo displayBook("28", "10"); ?>
-                <?php //echo displayBook("28", "11"); ?>
-                <?php //echo displayBook("28", "12"); ?>
 
                 <?php displayAns($queryResult); ?>
-            <!-- </div> -->
         </div>
 
 

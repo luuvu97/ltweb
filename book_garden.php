@@ -39,7 +39,7 @@
         // }else $page=$_GET['page'];
 
         $queryResult = executeQuery($bookName, $authorName, $categoryName, $releasedYear, $publisherName, $lowPrice, $maxPrice, "new");
-    }else $queryResult = executeQuery("", "", "" , "", "", "1000", "100000", "new");
+    }else $queryResult = executeQuery("", "", "" , "", "", "1000", "1000000", "new");
 ?>
 
 <!DOCTYPE html>

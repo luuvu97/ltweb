@@ -534,7 +534,7 @@ body {
   transform: translate(-50%,-50%) scale(0);
   background: #fff;
   width: 90vw;
-  /* height: 80vh; */
+  max-height: 80vh;
   overflow-x: hidden;
   z-index: 1000;
   overflow-y: scroll;

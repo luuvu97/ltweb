@@ -34,9 +34,6 @@
         if($releasedYear == "all"){
             $releasedYear = "";
         }
-        // if($isset($_GET['page']) == false){
-        //     $page = 1;
-        // }else $page=$_GET['page'];
 
         $queryResult = executeQuery($bookName, $authorName, $categoryName, $releasedYear, $publisherName, $lowPrice, $maxPrice, "new");
     }else $queryResult = executeQuery("", "", "" , "", "", "1000", "1000000", "new");
@@ -96,7 +93,7 @@
             <div class="nav">
                 <a class="top-nav cart" href="#"><i class="fa fa-shopping-cart"></i></a>
                 <div class="top-nav"><div class="mid-line"></div></div>
-                <a class="top-nav home" href="index.html"><span>sealBook</span></a>
+                <a class="top-nav home" href="index.php"><span>sealBook</span></a>
             </div>
 
             <div class="title">
@@ -153,10 +150,9 @@
 
         <?php echo generatePagination($queryResult); ?>
         <div class="products-wrapper">
-
                 <?php displayAns($queryResult); ?>
         </div>
-
+        <?php echo generatePagination($queryResult); ?>
 
     <div class="product-popup">
         <?php echo displayAnsPopUp($queryResult); ?>

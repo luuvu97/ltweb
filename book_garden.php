@@ -159,7 +159,7 @@
 
 
     <div class="product-popup">
-        <?php echo displayAnsPopUp($queryResult); ?>
+        <?php displayAnsPopUp($queryResult); ?>
     </div>
     <div class="footer">
         THIS IS FOOTER

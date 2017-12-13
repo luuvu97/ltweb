@@ -182,7 +182,7 @@
         $display .= '<img src="data:image/jpeg;base64,' .base64_encode($row["cover"]) .'" data="' .$row["bookid"] .'" alt="' .$row["bookname"] .'"/>';   
         $display .= "<div class='box'>";
         $display .= "<div class='cart'>Add to Cart</div>";
-        $display .= "<div class='price'>$" .$row['price'] ."</div>";
+        $display .= "<div class='price'>$" .$row['price']/10000 ."</div>";
         $display .= "</div></div>";
 
         }  
@@ -200,10 +200,10 @@
         $display .= "<div id='" .$bookID ."' class='product-detail'>";
         $display .= "<div class='content'>";
         $display .= "<div class='name'>" .$row['bookname'] ."</div>";
-        $display .= "<a href='#' class='author'>By: " .$row['authorname'] ."</a>";
+        $display .= "<a href='#' class='author'>by: " .$row['authorname'] ."</a>";
         $display .= "<div class='btn'>";
         $display .= "<div class='cart'>Add to Cart<div class='bg'></div><span>Add to Cart</span></div>";
-        $display .= "<div class='price'>" .$row['price'] ."<div class='bg'></div><span>$" .$row['price'] ."</span></div>";
+        $display .= "<div class='price'>$" .$row['price']/10000 ."<div class='bg'></div><span>$" .$row['price']/10000 ."</span></div>";
         $display .= "</div>";
         $display .= "<div class='intro'>";
         $display .= "<p style='text-align: left'><b>Introduction:</b></p>";        
@@ -227,7 +227,7 @@
         $display = "<div class='w3-padding-32'>";
         $display .= "<img src='" .$row['cover'] ."' class='w3-image' style='display:block;margin:auto' width='600' height='400' alt='" .$row['bookname'] ."' />";
         $display .= "<h3>" .$row['bookname'] ."</h3>";
-        $display .= "<i>Giá: " .$row['price'] ."</i><br>";        
+        $display .= "<i>Giá: " .$row['price']/10000 ."</i><br>";
         $display .= "Tác giả: " .$row['authorname'] ."<br>";
         $display .= "Danh mục: " .$row['categoryname'] ."<br>";
         $display .= "<span class='bookIntroduct'>";

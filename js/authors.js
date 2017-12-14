@@ -33,8 +33,8 @@ $(document).ready(function () {
 
   /************************* Popup Product ******************************/
   $(".book img").click(function () {
-    // console.log($(this).attr('alt'));
-    $("#"+$(this).attr('alt')).addClass("popup");
+    console.log($(this).attr('data'));
+    $("#"+$(this).attr('data')).addClass("popup");
   });
 
   $(".product-detail").click(function () {

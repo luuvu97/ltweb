@@ -378,7 +378,7 @@ body {
 }
 
 .products-layout {
-	height: 300vw;
+	/* height: 300vw; */
 	width: 98vw;
 	margin-top: 5vw;
 	background: #fff;

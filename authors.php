@@ -3,6 +3,7 @@
     require_once('define_variable.php');
 
     $link = mysqli_connect(HOST, USERNAME, PASSWORD, DBNAME) or die("Cannot connect to database");
+mysqli_set_charset($link,"utf8");
     $query = "select authorname, avatar, bio from author";
     $result = mysqli_query($link, $query);
 
@@ -86,7 +87,7 @@
 
     <div class="grid-container">
       <div class="grid-layout">
-W
+
         <?php echo $display; ?>
 
       </div>

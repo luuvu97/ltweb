@@ -4,6 +4,7 @@
     function executeQuery($bookName, $authorName, $categoryName, $releaseYear, $publisherName, $lowPrice, $maxPrice, $displayOrder){
 
         $link = mysqli_connect(HOST, USERNAME, PASSWORD, DBNAME) or die("Cannot connect to database");
+        mysqli_set_charset($link,"utf8");
         $query = "select bookid from book_brief_view where ";
         $haveBefore = false;    
 

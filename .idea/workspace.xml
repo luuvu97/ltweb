@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5be8f7f3-b4cf-48ef-8870-89dfdd051620" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/ltweb_Vu.iml" afterPath="$PROJECT_DIR$/.idea/ltweb_Vu.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/book_garden.php" afterPath="$PROJECT_DIR$/book_garden.php" />
       <change beforePath="$PROJECT_DIR$/css/component.css" afterPath="$PROJECT_DIR$/css/component.css" />
@@ -33,8 +31,8 @@
       <file leaf-file-name="book_garden.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/book_garden.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="158" column="0" lean-forward="true" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+            <state relative-caret-position="288">
+              <caret line="135" column="36" lean-forward="false" selection-start-line="135" selection-start-column="36" selection-end-line="135" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -43,8 +41,18 @@
       <file leaf-file-name="component.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="594" column="28" lean-forward="false" selection-start-line="594" selection-start-column="28" selection-end-line="594" selection-end-column="28" />
+            <state relative-caret-position="243">
+              <caret line="187" column="39" lean-forward="false" selection-start-line="187" selection-start-column="39" selection-end-line="187" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="authors.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/authors.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -63,15 +71,15 @@
       <file leaf-file-name="findbook.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/findbook.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-792">
-              <caret line="184" column="57" lean-forward="false" selection-start-line="184" selection-start-column="44" selection-end-line="184" selection-end-column="57" />
+            <state relative-caret-position="36">
+              <caret line="77" column="25" lean-forward="false" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
               <folding>
-                <marker date="1513176995180" expanded="true" signature="303:343" ph="select booki... book_brief_view" />
-                <marker date="1513176995180" expanded="true" signature="4494:4504" ph="..." />
-                <marker date="1513176995180" expanded="true" signature="7101:7160" ph="select * fro... book_brief_view" />
-                <marker date="1513176995180" expanded="true" signature="7953:8012" ph="select * fro... book_brief_view" />
-                <marker date="1513176995180" expanded="true" signature="8786:8802" ph="..." />
-                <marker date="1513176995180" expanded="true" signature="9354:9413" ph="select * fro... book_brief_view" />
+                <marker date="1513225682187" expanded="true" signature="303:343" ph="select booki... book_brief_view" />
+                <marker date="1513225682187" expanded="true" signature="4636:4646" ph="..." />
+                <marker date="1513225682187" expanded="true" signature="7243:7302" ph="select * fro... book_brief_view" />
+                <marker date="1513225682187" expanded="true" signature="8095:8154" ph="select * fro... book_brief_view" />
+                <marker date="1513225682187" expanded="true" signature="8928:8944" ph="..." />
+                <marker date="1513225682187" expanded="true" signature="9496:9555" ph="select * fro... book_brief_view" />
               </folding>
             </state>
           </provider>
@@ -92,6 +100,9 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>$row['price']</find>
+      <find>product-de</find>
+      <find>filter</find>
+      <find>filter-form</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -106,8 +117,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/define_variable.php" />
-        <option value="$PROJECT_DIR$/css/component.css" />
         <option value="$PROJECT_DIR$/book_garden.php" />
+        <option value="$PROJECT_DIR$/css/component.css" />
         <option value="$PROJECT_DIR$/findbook.php" />
       </list>
     </option>
@@ -118,11 +129,15 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7.1" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="94" />
-    <option name="width" value="673" />
-    <option name="height" value="551" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1192" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -173,6 +188,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,23 +199,31 @@
             </path>
             <path>
               <item name="ltweb_Vu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ltweb_Vu" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ltweb_Vu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ltweb_Vu" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ltweb_Vu" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PHPoop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BTL_WEB" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunDashboard">
@@ -235,6 +260,8 @@
       <module name="" />
       <envs />
     </configuration>
+    <configuration default="true" type="FirefoxRemoteDebugType" factoryName="Firefox Remote" port="8899" />
+    <configuration name="ltwebVu" type="FirefoxRemoteDebugType" factoryName="Firefox Remote" port="8899" />
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -313,14 +340,18 @@
       <workItem from="1513154622999" duration="2248000" />
       <workItem from="1513165248803" duration="628000" />
       <workItem from="1513173666503" duration="3157000" />
+      <workItem from="1513180216916" duration="444000" />
+      <workItem from="1513188125000" duration="74000" />
+      <workItem from="1513213666779" duration="6917000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8862000" />
+    <option name="totallyTimeSpent" value="16297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="94" width="1366" height="735" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -329,27 +360,27 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39901477" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,6 +402,147 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14256">
+          <caret line="594" column="28" lean-forward="false" selection-start-line="594" selection-start-column="28" selection-end-line="594" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/w3s.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="61" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/define_variable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/findbook.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5736">
+          <caret line="239" column="2" lean-forward="false" selection-start-line="239" selection-start-column="2" selection-end-line="239" selection-end-column="2" />
+          <folding>
+            <marker date="1513225682187" expanded="true" signature="303:343" ph="select booki... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="4636:4646" ph="..." />
+            <marker date="1513225682187" expanded="true" signature="7243:7302" ph="select * fro... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="8095:8154" ph="select * fro... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="8928:8944" ph="..." />
+            <marker date="1513225682187" expanded="true" signature="9496:9555" ph="select * fro... book_brief_view" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book_garden.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3792">
+          <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14256">
+          <caret line="594" column="28" lean-forward="false" selection-start-line="594" selection-start-column="28" selection-end-line="594" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/w3s.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="61" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/define_variable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/findbook.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5736">
+          <caret line="239" column="2" lean-forward="true" selection-start-line="239" selection-start-column="2" selection-end-line="239" selection-end-column="2" />
+          <folding>
+            <marker date="1513225682187" expanded="true" signature="303:343" ph="select booki... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="4636:4646" ph="..." />
+            <marker date="1513225682187" expanded="true" signature="7243:7302" ph="select * fro... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="8095:8154" ph="select * fro... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="8928:8944" ph="..." />
+            <marker date="1513225682187" expanded="true" signature="9496:9555" ph="select * fro... book_brief_view" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book_garden.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3792">
+          <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14256">
+          <caret line="594" column="28" lean-forward="false" selection-start-line="594" selection-start-column="28" selection-end-line="594" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/w3s.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="61" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/define_variable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/findbook.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4416">
+          <caret line="184" column="57" lean-forward="false" selection-start-line="184" selection-start-column="44" selection-end-line="184" selection-end-column="57" />
+          <folding>
+            <marker date="1513225682187" expanded="true" signature="303:343" ph="select booki... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="4636:4646" ph="..." />
+            <marker date="1513225682187" expanded="true" signature="7243:7302" ph="select * fro... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="8095:8154" ph="select * fro... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="8928:8944" ph="..." />
+            <marker date="1513225682187" expanded="true" signature="9496:9555" ph="select * fro... book_brief_view" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book_garden.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3792">
+          <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/w3s.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -384,12 +556,12 @@
         <state relative-caret-position="48">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <marker date="1513176995180" expanded="true" signature="303:343" ph="select booki... book_brief_view" />
-            <marker date="1513176995180" expanded="true" signature="4494:4504" ph="..." />
-            <marker date="1513176995180" expanded="true" signature="7101:7160" ph="select * fro... book_brief_view" />
-            <marker date="1513176995180" expanded="true" signature="7953:8012" ph="select * fro... book_brief_view" />
-            <marker date="1513176995180" expanded="true" signature="8786:8802" ph="..." />
-            <marker date="1513176995180" expanded="true" signature="9354:9413" ph="select * fro... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="303:343" ph="select booki... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="4636:4646" ph="..." />
+            <marker date="1513225682187" expanded="true" signature="7243:7302" ph="select * fro... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="8095:8154" ph="select * fro... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="8928:8944" ph="..." />
+            <marker date="1513225682187" expanded="true" signature="9496:9555" ph="select * fro... book_brief_view" />
           </folding>
         </state>
       </provider>
@@ -423,12 +595,12 @@
         <state relative-caret-position="48">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <marker date="1513176995180" expanded="true" signature="303:343" ph="select booki... book_brief_view" />
-            <marker date="1513176995180" expanded="true" signature="4494:4504" ph="..." />
-            <marker date="1513176995180" expanded="true" signature="7101:7160" ph="select * fro... book_brief_view" />
-            <marker date="1513176995180" expanded="true" signature="7953:8012" ph="select * fro... book_brief_view" />
-            <marker date="1513176995180" expanded="true" signature="8786:8802" ph="..." />
-            <marker date="1513176995180" expanded="true" signature="9354:9413" ph="select * fro... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="303:343" ph="select booki... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="4636:4646" ph="..." />
+            <marker date="1513225682187" expanded="true" signature="7243:7302" ph="select * fro... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="8095:8154" ph="select * fro... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="8928:8944" ph="..." />
+            <marker date="1513225682187" expanded="true" signature="9496:9555" ph="select * fro... book_brief_view" />
           </folding>
         </state>
       </provider>
@@ -462,12 +634,12 @@
         <state relative-caret-position="48">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <marker date="1513176995180" expanded="true" signature="303:343" ph="select booki... book_brief_view" />
-            <marker date="1513176995180" expanded="true" signature="4494:4504" ph="..." />
-            <marker date="1513176995180" expanded="true" signature="7101:7160" ph="select * fro... book_brief_view" />
-            <marker date="1513176995180" expanded="true" signature="7953:8012" ph="select * fro... book_brief_view" />
-            <marker date="1513176995180" expanded="true" signature="8786:8802" ph="..." />
-            <marker date="1513176995180" expanded="true" signature="9354:9413" ph="select * fro... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="303:343" ph="select booki... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="4636:4646" ph="..." />
+            <marker date="1513225682187" expanded="true" signature="7243:7302" ph="select * fro... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="8095:8154" ph="select * fro... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="8928:8944" ph="..." />
+            <marker date="1513225682187" expanded="true" signature="9496:9555" ph="select * fro... book_brief_view" />
           </folding>
         </state>
       </provider>
@@ -503,33 +675,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/component.css">
+    <entry file="file://$PROJECT_DIR$/book_garden.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="594" column="28" lean-forward="false" selection-start-line="594" selection-start-column="28" selection-end-line="594" selection-end-column="28" />
+        <state relative-caret-position="288">
+          <caret line="135" column="36" lean-forward="false" selection-start-line="135" selection-start-column="36" selection-end-line="135" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book_garden.php">
+    <entry file="file://$PROJECT_DIR$/js/authors.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="158" column="0" lean-forward="true" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="187" column="39" lean-forward="false" selection-start-line="187" selection-start-column="39" selection-end-line="187" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/findbook.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-792">
-          <caret line="184" column="57" lean-forward="false" selection-start-line="184" selection-start-column="44" selection-end-line="184" selection-end-column="57" />
+        <state relative-caret-position="36">
+          <caret line="77" column="25" lean-forward="false" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
           <folding>
-            <marker date="1513176995180" expanded="true" signature="303:343" ph="select booki... book_brief_view" />
-            <marker date="1513176995180" expanded="true" signature="4494:4504" ph="..." />
-            <marker date="1513176995180" expanded="true" signature="7101:7160" ph="select * fro... book_brief_view" />
-            <marker date="1513176995180" expanded="true" signature="7953:8012" ph="select * fro... book_brief_view" />
-            <marker date="1513176995180" expanded="true" signature="8786:8802" ph="..." />
-            <marker date="1513176995180" expanded="true" signature="9354:9413" ph="select * fro... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="303:343" ph="select booki... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="4636:4646" ph="..." />
+            <marker date="1513225682187" expanded="true" signature="7243:7302" ph="select * fro... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="8095:8154" ph="select * fro... book_brief_view" />
+            <marker date="1513225682187" expanded="true" signature="8928:8944" ph="..." />
+            <marker date="1513225682187" expanded="true" signature="9496:9555" ph="select * fro... book_brief_view" />
           </folding>
         </state>
       </provider>

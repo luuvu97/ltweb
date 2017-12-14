@@ -133,6 +133,7 @@
                             <?php echo get_released_year(); ?>
                         </select>
                     </div>
+                    <input class="go" type="submit" value="Go" style="">
                 </div>
 
 
@@ -142,7 +143,7 @@
 
                 <div class="search-box">
                     <input type="text" name="search" placeholder="search anything ... ">
-                    <input type="submit" value="SEARCH" style="width: 15%">
+
                     <div></div>
                 </div>
             </div>

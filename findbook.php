@@ -13,6 +13,11 @@
             $query .= "bookname like '%" .$bookName ."%'";
             $haveBefore = true;
         }
+        if($authorName != ""){
+            if($haveBefore == true) $query .= " or ";
+            $query .= "authorname = '" .$authorName ."'";
+            $haveBefore = true;
+        }
         if($categoryName != ""){
             if($haveBefore == true) $query .= " and ";
             $query .= "categoryname = '" .$categoryName ."'";
@@ -27,11 +32,6 @@
                 $query .= " and year(updated) <= '" .(intval($releaseYear) + 10) ."'";                               
             }
             $haveBefore = true;      
-        }
-        if($authorName != ""){
-            if($haveBefore == true) $query .= " and ";
-            $query .= "authorname = '" .$authorName ."'";
-            $haveBefore = true;        
         }
         if($publisherName != ""){
             if($haveBefore == true) $query .= " and ";
@@ -75,27 +75,29 @@
     }
 
     function displayAns($ans){
-        $records_per_page = RECORDS_PER_PAGE;
-        $total_num = count($ans);
-        $num_of_page = ceil($total_num/$records_per_page);
-        if(isset($_GET['page'])){
-            $page = $_GET['page'] - 1;
-        }else{
-            $page = 0;
-            $_GET['searchResult'] = $ans;
-        }
-        $num_of_records = RECORDS_PER_PAGE;
-        if($page == $num_of_page - 1){
-            $num_of_records = $total_num % RECORDS_PER_PAGE;
-        }
+        if ($ans != null){
+            $records_per_page = RECORDS_PER_PAGE;
+            $total_num = count($ans);
+            $num_of_page = ceil($total_num / $records_per_page);
+            if (isset($_GET['page'])) {
+                $page = $_GET['page'] - 1;
+            } else {
+                $page = 0;
+                $_GET['searchResult'] = $ans;
+            }
+            $num_of_records = RECORDS_PER_PAGE;
+            if ($page == $num_of_page - 1) {
+                $num_of_records = $total_num % RECORDS_PER_PAGE;
+            }
 
-        $tmp = ceil($num_of_records/2);
-        echo "<div class='products-layout' style='grid-template-rows: repeat(" .ceil($num_of_records/2) .", 1fr 4fr 1fr);'>";
-        
-        for($i = $page * $records_per_page; $i < $total_num && $i < ($page + 1) * $records_per_page; $i++){
-            echo displayBook($ans[$i], $i) ;
-        }
-        echo "</div>";
+            $tmp = ceil($num_of_records / 2);
+            echo "<div class='products-layout' style='grid-template-rows: repeat(" . ceil($num_of_records / 2) . ", 1fr 4fr 1fr);'>";
+
+            for ($i = $page * $records_per_page; $i < $total_num && $i < ($page + 1) * $records_per_page; $i++) {
+                echo displayBook($ans[$i], $i);
+            }
+            echo "</div>";
+        }else echo "<h2>No result</h2>";
         
     }
 

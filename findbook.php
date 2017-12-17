@@ -29,7 +29,7 @@
             $haveBefore = true;      
         }
         if($authorName != ""){
-            if($haveBefore == true) $query .= " and ";
+            if($haveBefore == true) $query .= " or ";
             $query .= "authorname = '" .$authorName ."'";
             $haveBefore = true;        
         }
@@ -48,6 +48,8 @@
             $query .= "price <= '" .$maxPrice ."'";
             $haveBefore = true;        
         }
+        if($haveBefore == true) $query .= " and ";        
+            $query .= "quantity > 0";
         if($displayOrder != ""){
             switch($displayOrder){
                 case "priceIncreased":
@@ -75,27 +77,31 @@
     }
 
     function displayAns($ans){
-        $records_per_page = RECORDS_PER_PAGE;
-        $total_num = count($ans);
-        $num_of_page = ceil($total_num/$records_per_page);
-        if(isset($_GET['page'])){
-            $page = $_GET['page'] - 1;
-        }else{
-            $page = 0;
-            $_GET['searchResult'] = $ans;
-        }
-        $num_of_records = RECORDS_PER_PAGE;
-        if($page == $num_of_page - 1){
-            $num_of_records = $total_num % RECORDS_PER_PAGE;
-        }
+        if($ans != null){
+            $records_per_page = RECORDS_PER_PAGE;
+            $total_num = count($ans);
+            $num_of_page = ceil($total_num/$records_per_page);
+            if(isset($_GET['page'])){
+                $page = $_GET['page'] - 1;
+            }else{
+                $page = 0;
+                $_GET['searchResult'] = $ans;
+            }
+            $num_of_records = RECORDS_PER_PAGE;
+            if($page == $num_of_page - 1){
+                $num_of_records = $total_num % RECORDS_PER_PAGE;
+            }
 
-        $tmp = ceil($num_of_records/2);
-        echo "<div class='products-layout' style='grid-template-rows: repeat(" .ceil($num_of_records/2) .", 1fr 4fr 1fr);'>";
-        
-        for($i = $page * $records_per_page; $i < $total_num && $i < ($page + 1) * $records_per_page; $i++){
-            echo displayBook($ans[$i], $i) ;
+            $tmp = ceil($num_of_records/2);
+            echo "<div class='products-layout' style='grid-template-rows: repeat(" .ceil($num_of_records/2) .", 1fr 4fr 1fr);'>";
+            
+            for($i = $page * $records_per_page; $i < $total_num && $i < ($page + 1) * $records_per_page; $i++){
+                echo displayBook($ans[$i], $i) ;
+            }
+            echo "</div>";
+        }else{
+            echo "<h2>No result</h2>";
         }
-        echo "</div>";
         
     }
 
@@ -115,6 +121,12 @@
         }
     }
 
+    function displayAnsPopUpWithoutPageField($ans){
+        for($i = 0; $i < count($ans); $i++){
+            echo displayBookGetPopUp($ans[$i]) ;
+        }
+    }
+
     function generatePagination($ans){
         $records_per_page = RECORDS_PER_PAGE;
         $total_num = count($ans);
@@ -126,7 +138,7 @@
             $_GET['searchResult'] = $ans;
         }
         $ret = "<div class='w3-center w3-padding-32' style='clear:both'><div class='w3-bar'>";
-        $num_of_page = $total_num/$records_per_page;
+        $num_of_page = ceil($total_num/$records_per_page);
         if($num_of_page <= 5){
             for($i = 0; $i < $num_of_page; $i++){
                 // $ret .= "<a href=" .generateUrl($i + 1) ." class='w3-bar-item w3-button w3-hover-black'>" .($i+1) ."</a>";
@@ -155,7 +167,7 @@
                     }
                 }
             }
-            $ret .= "<a href=" .$_SERVER['PHP_SELF'] ."?" .$_SERVER['QUERY_STRING'] ."&page=" .count($ans) ." class='w3-bar-item w3-button w3-hover-black'>»</a>";            
+            $ret .= "<a href=" .$_SERVER['PHP_SELF'] ."?" .$_SERVER['QUERY_STRING'] ."&page=" .$num_of_page ." class='w3-bar-item w3-button w3-hover-black'>»</a>";            
         }
         $ret .= "</div></div>";
         return $ret;
@@ -194,14 +206,14 @@
         $query = "select * from book_brief_view where bookid ='" .$bookID ."'";
         $result = mysqli_query($link, $query);
         $row = mysqli_fetch_array($result);
-
+        $authorUrl = "author-detail.php?name=" .$row['authorname'];        
         $display = "";
 
         $display .= "<div id='" .$bookID ."' class='product-detail'>";
         $display .= "<div class='content'>";
         $display .= "<div class='name'>" .$row['bookname'] ."</div>";
-        $display .= "<a href='#' class='author'>By: " .$row['authorname'] ."</a>";
-        $display .= "<div class='btn'>";
+        $display .= "<a href='" .$authorUrl ."' class='author'>By: " .$row['authorname'] ."</a>"; 
+        $display .= "<div class='btn' data='btn"  .$bookID ."'>";
         $display .= "<div class='cart'>Add to Cart<div class='bg'></div><span>Add to Cart</span></div>";
         $display .= "<div class='price'>" .$row['price'] ."<div class='bg'></div><span>$" .$row['price'] ."</span></div>";
         $display .= "</div>";

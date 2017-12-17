@@ -37,7 +37,7 @@
   <div class="container">
     <header class="header">
       <div class="nav">
-        <a class="top-nav cart" href="#">
+        <a class="top-nav cart" href="shoppingCart.php">
           <i class="fa fa-shopping-cart"></i>
         </a>
         <a class="top-nav home" href="index.php">

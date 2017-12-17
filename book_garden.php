@@ -9,6 +9,8 @@
 <?php
     $flag = false;
 
+    $queryResult = "";
+    
     if(isset($_GET['lowPrice'])){ //new search
         $flag = true;
 
@@ -91,7 +93,7 @@
             <div class="bg-img"><img src="background/book_garden.jpg" alt="Background Image" /></div>
 
             <div class="nav">
-                <a class="top-nav cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+                <a class="top-nav cart" href="shoppingCart.php"><i class="fa fa-shopping-cart"></i></a>
                 <div class="top-nav"><div class="mid-line"></div></div>
                 <a class="top-nav home" href="index.php"><span>sealBook</span></a>
             </div>

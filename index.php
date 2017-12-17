@@ -23,7 +23,7 @@
 
 		<div class="home-book">
 			<div class="nav">
-				<a class="top-nav cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+				<a class="top-nav cart" href="shoppingCart.php"><i class="fa fa-shopping-cart"></i></a>
 				<!--<a class="top-nav menu" style="display: none" href="#">MENU</a>-->
 
 			</div>

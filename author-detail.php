@@ -26,7 +26,7 @@
         $result = mysqli_query($link, $query);
         if($result != false){
           $row = mysqli_fetch_array($result);
-          $ret = '<div class="book ' .($i + 1) .'">' .'<img src="data:image/jpeg;base64,' .base64_encode($row["cover"]) .'" alt="' .$row["bookname"] .'" data="' .$row["bookid"] .'"/></div>';          
+          $ret .= '<div class="book ' .($i + 1) .'">' .'<img src="data:image/jpeg;base64,' .base64_encode($row["cover"]) .'" alt="' .$row["bookname"] .'" data="' .$row["bookid"] .'"/></div>';          
         }
       }
       return $ret;
@@ -53,7 +53,7 @@
   <div class="info-container">
     <div class="img"><?php echo '<img src="data:image/jpeg;base64,' .base64_encode($rowInfo["avatar"]) .'" alt="' .$rowInfo["authorname"] .'"/>'; ?></div>
     <div class="info">
-      <div class="year">1986</div>
+      <div class="year"><?php echo $rowInfo['dateofbirth']; ?></div>
       <div class="story"><?php echo $rowInfo['bio']; ?></div>
     </div>
   </div>
@@ -64,7 +64,7 @@
   </div>
 
     <div class="product-popup">
-        <?php echo displayAnsPopUp($bookList); ?>
+        <?php echo displayAnsPopUpWithoutPageField($bookList); ?>
     </div>
 
   <a class = "back" href="javascript:history.go(-1)">Back</a>

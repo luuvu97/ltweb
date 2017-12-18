@@ -44,4 +44,16 @@ $(document).ready(function () {
   $(".product-detail .btn").hover(function () {
       $(this).toggleClass("reverse");
   });
+  $(".product-detail .content .btn").click(function () {
+    var bookid = $(this).attr('data').substring(3, $(this).attr('data').length);
+    var quantity = prompt("How much do you want: ");
+    if(isNaN(quantity)){
+      alert("You input a wrong number")
+    }
+    else{
+      url = "addCart.php?bookid=" + bookid + "&quantity=" + quantity;
+      window.open(url, "_self");
+    }
+    $(this).removeClass("popup");
+  });
 });

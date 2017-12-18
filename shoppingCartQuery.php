@@ -14,7 +14,7 @@
             }else{
                 unset($_SESSION['cart'][$id]);
            }
-           header("location:shoppingCart.php");
+           header("location:shoppingCart.php#bookList");
            exit();
         }
     }

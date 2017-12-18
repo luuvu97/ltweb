@@ -149,8 +149,8 @@
 
             <div class="bg-img"><img src="background/book_garden.jpg" alt="Background Image" /></div>
         </header>
-
         <?php echo generatePagination($queryResult); ?>
+        <a name="bookList"></a>
         <div class="products-wrapper">
                 <?php displayAns($queryResult); ?>
         </div>

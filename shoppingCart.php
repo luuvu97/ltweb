@@ -143,7 +143,7 @@
     	</tbody>
     	<tfoot>
     		<tr>
-    			<td><a href="book_garden.php" class="btn btn-warning"><i class="fa fa-angle-left">Go to BOOK GARDEN</i></a></td>
+    			<td><a href="book_garden.php#bookList" class="btn btn-warning"><i class="fa fa-angle-left">Go to BOOK GARDEN</i></a></td>
     			<td></td>
     			<td></td>
     			<td></td>

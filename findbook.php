@@ -59,7 +59,7 @@
                     $query .= " group by bookid order by price desc";
                     break;
                 default:
-                    $query .= " group by bookid order by updated asc";                
+                    $query .= " group by bookid order by bookid asc";                
             }
         }
 
@@ -89,7 +89,7 @@
             }
             $num_of_records = RECORDS_PER_PAGE;
             if($page == $num_of_page - 1){
-                $num_of_records = $total_num % RECORDS_PER_PAGE;
+                $num_of_records = $total_num - $page * RECORDS_PER_PAGE;
             }
 
             $tmp = ceil($num_of_records/2);
@@ -149,7 +149,7 @@
                 }
             }
         }else{
-            $ret .= "<a href=" .$_SERVER['PHP_SELF'] ."?" .$_SERVER['QUERY_STRING'] ."&page=1" ." class='w3-bar-item w3-button w3-hover-black'>«</a>";
+            $ret .= "<a href=" .generateUrl('1') ." class='w3-bar-item w3-button w3-hover-black'>«</a>";
             if($page < 3){
                 for($i = 0; $i < 5; $i++){
                     if($i != $page){
@@ -167,7 +167,7 @@
                     }
                 }
             }
-            $ret .= "<a href=" .$_SERVER['PHP_SELF'] ."?" .$_SERVER['QUERY_STRING'] ."&page=" .$num_of_page ." class='w3-bar-item w3-button w3-hover-black'>»</a>";            
+            $ret .= "<a href=" .generateUrl($num_of_page) ." class='w3-bar-item w3-button w3-hover-black'>»</a>";            
         }
         $ret .= "</div></div>";
         return $ret;
@@ -179,7 +179,9 @@
             $url = str_replace(strstr($url, "&page="), "&page=" .$pageNumber, $url);            
         }else{
             $url .= "&page=" .$pageNumber;
-        }return $url;
+        }
+        $url .= "#bookList";
+        return $url;
     }
 
     function displayBook($bookID, $sequence_number){

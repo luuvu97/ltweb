@@ -66,8 +66,8 @@
                 echo "<script>alert('Sorry we don\'t have enough book for you')</script>";
             }else{
                 echo "<script>alert('Your request is complete!')</script>";
+                unset($_SESSION['cart']);                            
             }
-            unset($_SESSION['cart']);            
             echo "<script>window.location.replace('index.php');</script>";                
         ?>   
     </body>

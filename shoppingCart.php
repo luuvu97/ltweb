@@ -85,10 +85,10 @@
     			<div class="row">
 				<div class="col-lg-2 "><?php echo '<img src="data:image/jpeg;base64,' .base64_encode($row["cover"]) .'"/>'; ?></div>
     			<div class="col-lg-10">
-    				<h4><span class="font">Mã sách :</span> <?php echo $row['bookid'] ?></h4>
-    				<h5><span class="font">Tên sách :</span> <?php echo $row['bookname'] ?> </h5>
-                    <p><span class="font">Nhà phát hành :</span><?php echo $row['publishername']; ?></p>
-    			    <p><span class="font">Mô tả sản phẩm: </span><?php echo substr($row['description'],1, 200); ?></p>
+    				<h4><span class="font">ID :</span> <?php echo $row['bookid'] ?></h4>
+    				<h5><span class="font">Book Name :</span> <?php echo $row['bookname'] ?> </h5>
+                    <p><span class="font">Publisher :</span><?php echo $row['publishername']; ?></p>
+    			    <p><span class="font">Introduction : </span><?php echo substr($row['description'],1, 200); ?></p>
     			</div>
 
     		</div>
@@ -171,7 +171,7 @@
 					Telephone
 				</td>
 				<td>
-					<input type="text" name="phone" required>
+					<input type="text" name="phone" pattern="[0-9]{10-11}" required>
 				</td>
 				<td class="affect">Address</td>
 				<td>

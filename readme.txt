@@ -1,6 +1,6 @@
-Bảng book.price kiểu dữ liệu: decimal(10,2) do là sách T.A nên giá sẽ nhỏ.
+﻿Bảng book.price kiểu dữ liệu: decimal(10,2) do là sách T.A nên giá sẽ nhỏ.
 Bảng orderbook thêm trường total: decimal(10,2) lưu tổng giá trị đơn hàng
-
+Bảng customer thì 2 cột email, gender thì bỏ tùy chọn NOT NULL đi vì t không dùng 2 cái đấy
 
 Thêm 2 function trong mysql:
 

@@ -70,11 +70,16 @@ $("input[name='sentOrder']").click(function(){
     }
     else if(!$("input[name='phone']").val()){
         $("input[name='phone']").focus();
-        alert('Please fill your phone');        
+        alert('Please fill your phone');
     }
     else if(!$("textarea[name='address']").val()){
         $("input[name='address']").focus();
         alert('Please fill your address');        
+    }
+    else if(!(parseInt($("input[name='phone']").val()) != NaN && ($("input[name='phone']").val().length == 10 || $("input[name='phone']").val() == 11))){
+        $("input[name='phone']").focus();
+        alert(parseInt($("input[name='phone']").val()));
+        // alert('You input wrong phone number type. Phone number have 10 or 11 digit from 0 to 9');
     }
     else if(confirm("Please make sure all your information is correct")){
         var tmp = "sendOrder.php";

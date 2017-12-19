@@ -53,7 +53,7 @@
   <div class="info-container">
     <div class="img"><?php echo '<img src="data:image/jpeg;base64,' .base64_encode($rowInfo["avatar"]) .'" alt="' .$rowInfo["authorname"] .'"/>'; ?></div>
     <div class="info">
-      <div class="year"><?php echo $rowInfo['dateofbirth']; ?></div>
+      <div class="year"><?php echo $rowInfo['dob']; ?></div>
       <div class="story"><?php echo $rowInfo['bio']; ?></div>
     </div>
   </div>

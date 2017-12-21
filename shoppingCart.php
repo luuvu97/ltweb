@@ -99,7 +99,7 @@
     		<td>
 				<div class="add" name="<?php echo $row['bookid']; ?>"style="background-color: red; height: 100%; width: 15%; text-align: center; float: left">+</div>
 				<div class="minus" name="<?php echo $row['bookid']; ?>"style="background-color: red; height: 100%; width: 15%; text-align: center; float: right">-</div>
-				<div id="quantity<?php echo $row['bookid']; ?>" style="text-align: center" name="quantity" data="<?php echo $row['bookid']; ?>"><?php echo $_SESSION['cart'][$row['bookid']]; ?></div>
+				<div id="quantity<?php echo $row['bookid']; ?>" style="text-align: center" name="quantity" data="<?php echo $row['bookid'] ."-" .$row['quantity']; ?>"><?php echo $_SESSION['cart'][$row['bookid']]; ?></div>
 			</td>
     		<td  class="text-center">
 				<p id="amount<?php echo $row['bookid'];?>"><?php echo $row['price'] * $_SESSION['cart'][$row['bookid']]; ?></p>

@@ -2,7 +2,9 @@ $("input[name='updateCart']").click(function(){
     var tmp = "";
     var list = document.getElementsByName('quantity');
     for(i = 0; i < list.length; i++){
-        tmp += "bookid" + i + "=" + list[i].getAttribute('data');
+        var temp = list[i].getAttribute('data');
+        temp.indexOf("-");
+        tmp += "bookid" + i + "=" + temp.substr(0, temp.indexOf("-"));
         tmp += "&quantity" + i + "=" + list[i].innerText;
         if(i != list.length - 1){
             tmp += "&";
@@ -19,18 +21,24 @@ $("input[name='emptyCart']").click(function(){
 $("div .add").click(function(){
     var bookid = $(this).attr('name');
     var tmp = "#quantity" + bookid;
+    var temp = $(tmp).attr('data');
+    var maxQuantity = temp.substr(temp.indexOf("-") + 1, temp.length);
     var lastQuantity = parseInt($(tmp).text());
     var newQuantity = lastQuantity + 1;
-    $(tmp).text(newQuantity);
-    tmp = "#price" + bookid;
-    var price = parseFloat($(tmp).text());
-    var amount = price * newQuantity;
-    tmp = "#amount" + bookid;
-    $(tmp).text(amount);
-    tmp = "#total";
-    var lastTotal = parseFloat($(tmp).text());
-    var newToatl = lastTotal + price;
-    $(tmp).text(newToatl);
+    if(newQuantity > maxQuantity){
+        alert("It's is maximum books we have");
+    }else{
+        $(tmp).text(newQuantity);
+        tmp = "#price" + bookid;
+        var price = parseFloat($(tmp).text());
+        var amount = price * newQuantity;
+        tmp = "#amount" + bookid;
+        $(tmp).text(amount);
+        tmp = "#total";
+        var lastTotal = parseFloat($(tmp).text());
+        var newToatl = lastTotal + price;
+        $(tmp).text(newToatl);
+    }
 });
 
 $("div .minus").click(function(){
@@ -39,7 +47,7 @@ $("div .minus").click(function(){
     var lastQuantity = parseInt($(tmp).text());
     var newQuantity = lastQuantity - 1;
     if(newQuantity < 0){
-        alert("Cannot minus");
+         
     }else{
         $(tmp).text(newQuantity);
         tmp = "#price" + bookid;
@@ -76,7 +84,7 @@ $("input[name='sentOrder']").click(function(){
         $("input[name='address']").focus();
         alert('Please fill your address');        
     }
-    else if(!(parseInt($("input[name='phone']").val()) != NaN && ($("input[name='phone']").val().length == 10 || $("input[name='phone']").val() == 11))){
+    else if(!(parseInt($("input[name='phone']").val()) != NaN && ($("input[name='phone']").val().length == 10 || $("input[name='phone']").val().length == 11))){
         $("input[name='phone']").focus();
         alert('You input wrong phone number type. Phone number have 10 or 11 digit from 0 to 9');
     }

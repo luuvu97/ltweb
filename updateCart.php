@@ -12,5 +12,9 @@
             $i ++;
         }else break;
     }
+
+    if(count($_SESSION['cart']) == 0){
+        unset($_SESSION['cart']);
+    }
     echo "<script>window.location.replace('shoppingCart.php');</script>";    
 ?>

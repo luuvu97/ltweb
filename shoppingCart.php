@@ -16,7 +16,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
   <style type="text/css">
   	th{
   		color: #004400;
@@ -83,12 +84,12 @@
                 <tr>
     			<td>
     			<div class="row">
-				<div class="col-lg-2 "><?php echo '<img src="data:image/jpeg;base64,' .base64_encode($row["cover"]) .'"/>'; ?></div>
+				<div class="col-lg-2 "><?php echo '<img class="logo" src="data:image/jpeg;base64,' .base64_encode($row["cover"]) .'" data="' .$row["bookid"] .'" alt="' .$row["bookname"] .'"/>'; ?></div>
     			<div class="col-lg-10">
-    				<h4><span class="font">ID :</span> <?php echo $row['bookid'] ?></h4>
-    				<h5><span class="font">Book Name :</span> <?php echo $row['bookname'] ?> </h5>
-                    <p><span class="font">Publisher :</span><?php echo $row['publishername']; ?></p>
-    			    <p><span class="font">Introduction : </span><?php echo substr($row['description'],1, 200); ?></p>
+    				<h4><span class="font">ID: </span> <?php echo $row['bookid'] ?></h4>
+    				<h5><span class="font">Book Name: </span> <?php echo $row['bookname'] ?> </h5>
+					<p><span class="font">Author: </span><?php echo $row['authorname']; ?></p> 
+					<p><span class="font">Publisher: </span><?php echo $row['publishername']; ?></p>
     			</div>
 
     		</div>
@@ -97,8 +98,8 @@
 				<p id="price<?php echo $key; ?>"><?php echo $row['price']; ?></p>
     		</td>
     		<td>
-				<div class="add" name="<?php echo $row['bookid']; ?>"style="background-color: red; height: 100%; width: 15%; text-align: center; float: left">+</div>
-				<div class="minus" name="<?php echo $row['bookid']; ?>"style="background-color: red; height: 100%; width: 15%; text-align: center; float: right">-</div>
+				<div class="add" name="<?php echo $row['bookid']; ?>"style="background-color: red; height: 100%; width: 15%; text-align: center; float: left; cursor: pointer">+</div>
+				<div class="minus" name="<?php echo $row['bookid']; ?>"style="background-color: red; height: 100%; width: 15%; text-align: center; float: right; cursor: pointer">-</div>
 				<div id="quantity<?php echo $row['bookid']; ?>" style="text-align: center" name="quantity" data="<?php echo $row['bookid'] ."-" .$row['quantity']; ?>"><?php echo $_SESSION['cart'][$row['bookid']]; ?></div>
 			</td>
     		<td  class="text-center">
@@ -131,8 +132,14 @@
 					    </tr>
 						<tr>
 							<td colspan='5' style="text-align: center">
-							<input style="max-width: 150px; position: relative" type="button" name="updateCart" value="Update">
-							<input type="button" value="Empty Cart" style="max-width: 150px; position: relative" name="emptyCart">
+							<?php 
+								if($_SESSION['alreadyOrder'] == false){
+									echo '<input style="max-width: 150px; position: relative" type="button" name="updateCart" value="Update">';
+									echo '<input type="button" value="Empty Cart" style="max-width: 150px; position: relative" name="emptyCart">';
+								}else {
+									echo '<input style="max-width: 150px; position: relative" type="button" name="newOrder" value="Create New Order">';
+								}
+							?>
 							</td>
 						</tr>
                      	<?php  
@@ -149,7 +156,7 @@
     			<td></td>
     			
     			<?php 
-                    if(isset($_SESSION['cart'])){
+                    if(isset($_SESSION['cart']) && $_SESSION['alreadyOrder'] == false){
 
 						?>
 						<td><input class="btn btn-success btn-block" type="button" name="placeOrder" value="Place Order"></td>
@@ -163,23 +170,44 @@
     </table>
 	<div name="customerInfo" style="width: 100%">
 		<label><h3 style="style:bold; color: red">FILL YOUR INFORMATION</h3> </label>
-		<table border="1px" style="background-color: #99CCCC; width: 100%">
-			<tr>
-				<td class="affect">Full name</td>
-				<td><input type="text" name="name" required></td>
-				<td class="affect">
-					Telephone
-				</td>
-				<td>
-					<input type="text" name="phone" pattern="[0-9]{10-11}" required>
-				</td>
-				<td class="affect">Address</td>
-				<td>
-					<textarea cols="50" rows="3" name="address" required></textarea>
-				</td>
-			</tr>
-		</table>
-		<input type="button" name="sentOrder" value="Sent" style="max-width: 200px; float: right; margin: 5px;">
+			<form action="sendOrder.php" method="GET">
+				<div class="form-group">
+						<label>Name</label>
+						<input type="text" name="name" class="form-control" placeholder="Name" required>
+				</div>
+				<div class="form-group">
+					<label>Gender</label>
+					<select name="gender">
+							<option value="Male" selected>Male</option>
+							<option value="Female">Female</option>
+					</select>
+				</div>
+				<div class="form-group">
+						<label>PhoneNumber</label>
+						<input id="txtPhone" type="text" name="phone" class="form-control" placeholder="PhoneNumber" required pattern="[0-9]{10,11}" title="Phone number have 10 or 11 digit form 0 to 9">
+				</div>
+				<div class="form-group">
+						<label>Address</label>
+						<input type="text" name="address" class="form-control" placeholder="Address" required>
+				</div>
+				<div class="form-group">
+						<label>Email</label>
+						<input type="email" name="email" class="form-control" placeholder="Email" required>
+				</div>
+
+			<input type="submit" name="sentOrder" value="Sent" style="max-width: 200px; float: right; margin: 5px; border-bottom: 200px">
+			<span id="spnPhoneStatus" style="padding: 100px"></span>
+		</form>
+	</div>
+
+	<div class="product-popup">
+		<?php
+			if(isset($_SESSION['cart'])){
+				foreach($_SESSION['cart'] as $key => $value){
+					echo displayBookGetPopUp($key);
+				}
+			}
+		?>
 	</div>
     
 	<script src="js/shoppingCart.js"></script>

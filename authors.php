@@ -3,11 +3,20 @@
     require_once('define_variable.php');
 
     $link = mysqli_connect(HOST, USERNAME, PASSWORD, DBNAME) or die("Cannot connect to database");
-    $query = "select authorname, avatar, bio from author";
+    $query = "select authorname, avatar, bio from author order by authorname asc";
     $result = mysqli_query($link, $query);
 
     $display = "";
+    $firstChar = "A";
     while(($row = mysqli_fetch_array($result)) != null){
+        if($firstChar == "A"){
+          $display .= "<a name='" .$firstChar ."'></a>";
+        }
+        if($firstChar != strtoupper(substr($row['authorname'], 0, 1))){
+          $firstChar = chr(ord($firstChar) + 1);
+          $display .= "<a name='" .$firstChar ."'></a>";
+        }
+      
         $display .= "<div class='author' data='abc'>";
         $display .= '<img src="data:image/jpeg;base64,' .base64_encode($row["avatar"]) .'" alt="' .$row["authorname"] .'"/>';
         $display .= "<a class='overlay' href='author-detail.php?name=" .$row['authorname'] ."'>" .$row['authorname'] ."</a>";

@@ -141,7 +141,6 @@
         $num_of_page = ceil($total_num/$records_per_page);
         if($num_of_page <= 5){
             for($i = 0; $i < $num_of_page; $i++){
-                // $ret .= "<a href=" .generateUrl($i + 1) ." class='w3-bar-item w3-button w3-hover-black'>" .($i+1) ."</a>";
                 if($i != $page){
                     $ret .=  "<a href=" .generateUrl($i + 1) ." class='w3-bar-item w3-button w3-hover-black'>" .($i+1) ."</a>";                        
                 }else{
@@ -197,6 +196,9 @@
         $display .= "<div class='box'>";
         $display .= "<div class='cart'>Add to Cart</div>";
         $display .= "<div class='price'>$" .$row['price'] ."</div>";
+        $display .= "</div>";
+        $display .= "<div class='info'>" .$row['bookname'];
+        $display .= "<br>By: " .$row['authorname'];
         $display .= "</div></div>";
 
         }  
@@ -215,6 +217,9 @@
         $display .= "<div class='content'>";
         $display .= "<div class='name'>" .$row['bookname'] ."</div>";
         $display .= "<a href='" .$authorUrl ."' class='author'>By: " .$row['authorname'] ."</a>"; 
+        $display .= "<p>Publisher: " .$row['publishername'] ."</p>";
+        $display .= "<p>Released Day: " .$row['updated'] ."</p>";
+        $display .= "<p>" .$row['quantity'] ." books are available</p>";
         $display .= "<div class='btn' data='btn"  .$bookID ."'>";
         $display .= "<div class='cart'>Add to Cart<div class='bg'></div><span>Add to Cart</span></div>";
         $display .= "<div class='price'>" .$row['price'] ."<div class='bg'></div><span>$" .$row['price'] ."</span></div>";

@@ -17,7 +17,7 @@ $(".product img").click(function () {
 $(".product-detail .content .btn").click(function () {
   var bookid = $(this).attr('data').substring(3, $(this).attr('data').length);
   var quantity = prompt("How much do you want: ", "1");
-  if(isNaN(quantity) || quantity == 0){
+  if(isNaN(quantity) || quantity == 0 || quantity == null){
     alert("You input a wrong number")
   }
   else{

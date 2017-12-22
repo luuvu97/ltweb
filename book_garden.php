@@ -9,8 +9,6 @@
 <?php
     $flag = false;
 
-    $queryResult = "";
-    
     if(isset($_GET['lowPrice'])){ //new search
         $flag = true;
 
@@ -20,10 +18,8 @@
         $releasedYear = $_GET['releasedYear'];
         $lowPrice = $_GET['lowPrice'];
         $maxPrice = $_GET['maxPrice'];
-        // $displayOrder = $_GET['searchDisplayOrder'];
+        $displayOrder = $_GET['searchDisplayOrder'];
         
-        require_once ('findbook.php');
-
         $bookName = $search;
         $authorName = $search;
 
@@ -37,7 +33,7 @@
             $releasedYear = "";
         }
 
-        $queryResult = executeQuery($bookName, $authorName, $categoryName, $releasedYear, $publisherName, $lowPrice, $maxPrice, "new");
+        $queryResult = executeQuery($bookName, $authorName, $categoryName, $releasedYear, $publisherName, $lowPrice, $maxPrice, $displayOrder);
     }else $queryResult = executeQuery("", "", "" , "", "", "1000", "1000000", "new");
 ?>
 
@@ -132,6 +128,15 @@
                             <?php echo get_released_year(); ?>
                         </select>
                     </div>
+                    <div>Sort by<br>
+                        <select name="searchDisplayOrder" id="searchDisplayOrder">
+                            <option value="new">Newest</option>
+                            <option value="popular">Popular</option>
+                            <option value="priceIncreased">Price Increased</option>
+                            <option value="priceDescreased">Price Descreased</option>
+                        </select>
+                    </div>
+                    <input class="go" type="submit" value="Go">
                 </div>
 
 
@@ -140,8 +145,8 @@
                 </div>
 
                 <div class="search-box">
-                    <input type="text" name="search" placeholder="search anything ... ">
-                    <input type="submit" value="SEARCH" style="width: 15%">
+                    <input id="searchSearch" type="text" name="search" placeholder="search anything ... ">
+
                     <div></div>
                 </div>
             </div>
@@ -149,35 +154,39 @@
 
             <div class="bg-img"><img src="background/book_garden.jpg" alt="Background Image" /></div>
         </header>
+
+    <a name="bookList"></a>
         <?php echo generatePagination($queryResult); ?>
-        <a name="bookList"></a>
         <div class="products-wrapper">
                 <?php displayAns($queryResult); ?>
         </div>
         <?php echo generatePagination($queryResult); ?>
 
     <div class="product-popup">
-        <?php echo displayAnsPopUp($queryResult); ?>
+        <?php displayAnsPopUp($queryResult); ?>
     </div>
     <div class="footer">
         THIS IS FOOTER
     </div>
 
     </div>
+
     
     <script src="js/classie.js"></script>
     <script src="js/header.js"></script>
     <script src="js/products.js"></script>
 
-        <!-- REVERT SEARCH VARIABLE -->
-    <script language="JavaScript">
-    if('<?php echo $flag ?>' == true){
+    <!-- REVERT SEARCH VARIABLE -->
+    <script>
+    if(<?php echo $flag ?> == true){
+        $()
         document.getElementById("searchSearch").value = '<?php echo $_GET['search']; ?>';
         document.getElementById("searchCategoryName").value = '<?php echo $_GET['categoryName']; ?>';
         document.getElementById("searchPublisherName").value = '<?php echo $_GET['publisherName']; ?>';
         document.getElementById("searchReleasedYear").value = '<?php echo $_GET['releasedYear']; ?>';
-        // document.getElementById("searchDisplayOrder").value = '<?php //$GET['displayOrder']; ?>';
+        document.getElementById("searchDisplayOrder").value = '<?php echo $_GET['searchDisplayOrder']; ?>';
     }</script>
-        <!-- REVERT SEARCH VARIABLE -->
+    <!-- REVERT SEARCH VARIABLE -->
+
     </body>
 </html>

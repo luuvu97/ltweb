@@ -5,9 +5,12 @@
 	margin-top: 1em;
 }
 
+.product .info{
+	border: 1px solid lightblue;
+	position: relative;
+}
 
-
-
+/* ------------------- */
 
 *,*::before,*::after{
 	box-sizing: border-box;
@@ -413,6 +416,7 @@ body {
 	cursor: pointer;
 	position: relative;
 	box-shadow: -7px 7px 21px rgba(34, 34, 34, 0.8);
+	border: 2px solid red;
 }
 
 .product .box .cart {
@@ -442,7 +446,6 @@ body {
 .product .box.pulled .price {
 	width: 0%;
 }
-
 
 
 /*********** Layout **************/

@@ -9,15 +9,17 @@
     $name = $_GET['name'];
     $phone = $_GET['phone'];
     $addr = $_GET['address'];
+    $gender = $_GET['gender'];
+    $email = $_GET['email'];
 
-    $query = "select id from customer where name='" .$name ."' and phone='" .$phone ."' and address='" .$addr ."';";
+    $query = "select id from customer where name='" .$name ."' and phone='" .$phone ."' and address='" .$addr ."' and gender='" .$gender ."' and email='" .$email ."';";
     $result = mysqli_query($link, $query);
     $row = mysqli_affected_rows($link);
     
     if($row <= 0){
-        $query = "insert into customer(name, phone, address) values('" .$name ."','" .$phone ."','" .$addr ."');";
+        $query = "insert into customer(name, phone, address, gender, email) values('" .$name ."','" .$phone ."','" .$addr ."','" .$gender ."','" .$email ."');";
         $result = mysqli_query($link, $query);
-        $query = "select id from customer where name='" .$name ."' and phone='" .$phone ."' and address='" .$addr ."';";
+        $query = "select id from customer where name='" .$name ."' and phone='" .$phone ."' and address='" .$addr ."' and gender='" .$gender ."' and email='" .$email ."';";
         $result = mysqli_query($link, $query); 
     }
 
@@ -57,6 +59,7 @@
     
     $query = "update orderbook set total='" .$total ."' where id='" .$orderID ."';";
     $result = mysqli_query($link, $query);
+
 ?>
 
 <html>
@@ -66,7 +69,7 @@
                 echo "<script>alert('Sorry we don\'t have enough book for you')</script>";
             }else{
                 echo "<script>alert('Your request is complete!')</script>";
-                unset($_SESSION['cart']);                            
+                $_SESSION['alreadyOrder'] = true;
             }
             echo "<script>window.location.replace('index.php');</script>";                
         ?>   

@@ -16,6 +16,7 @@
         
         if(isset($_SESSION['cart']) == false){
             $_SESSION['cart'] = array();
+            $_SESSION['alreadyOrder'] = false;
         }
         //use bookid as a key
         if(isset($_SESSION['cart'][$bookid]) == true){

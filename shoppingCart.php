@@ -62,7 +62,7 @@
                  	?>
                  	<thead>
     		<tr>
-    		<th style="width: 50%">Book</th>
+    		<th style="width: 40%">Book</th>
     		<th style="width: 10%" class="text-center">Unit Price</th>
     		<th style="width: 10%" class="text-center">Quantity</th>
     		<th style="width: 20%" class="text-center" class="text-center">Amount</th>
@@ -84,8 +84,8 @@
                 <tr>
     			<td>
     			<div class="row">
-				<div class="col-lg-2 "><?php echo '<img class="logo" src="data:image/jpeg;base64,' .base64_encode($row["cover"]) .'" data="' .$row["bookid"] .'" alt="' .$row["bookname"] .'"/>'; ?></div>
-    			<div class="col-lg-10">
+				<div class="col-lg-4 "><?php echo '<img class="logo" src="data:image/jpeg;base64,' .base64_encode($row["cover"]) .'" data="' .$row["bookid"] .'" alt="' .$row["bookname"] .'"/>'; ?></div>
+    			<div class="col-lg-8">
     				<h4><span class="font">ID: </span> <?php echo $row['bookid'] ?></h4>
     				<h5><span class="font">Book Name: </span> <?php echo $row['bookname'] ?> </h5>
 					<p><span class="font">Author: </span><?php echo $row['authorname']; ?></p> 

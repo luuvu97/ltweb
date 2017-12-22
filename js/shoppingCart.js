@@ -75,36 +75,11 @@ $("input[name='placeOrder']").click(function(){
     $("input[name='name']").focus();    
 });
 
-// $("input[name='sentOrder']").click(function(){
-//     if(!$("input[name='name']").val()){
-//         $("input[name='name']").focus();
-//         alert('Please fill your name!');
-//     }
-//     else if(!$("input[name='phone']").val()){
-//         $("input[name='phone']").focus();
-//         alert('Please fill your phone');
-//     }
-//     else if(!$("input[name='address']").val()){
-//         $("input[name='address']").focus();
-//         alert('Please fill your address');        
-//     }else if(!$("input[name='email']").val()){
-//         $("input[name='email']").focus();
-//         alert('Please fill your email');    
-//     }
-//     else if(!(parseInt($("input[name='phone']").val()) != NaN && ($("input[name='phone']").val().length == 10 || $("input[name='phone']").val().length == 11))){
-//         $("input[name='phone']").focus();
-//         alert('You input wrong phone number type. Phone number have 10 or 11 digit from 0 to 9');
-//     }
-//     else if(confirm("Please make sure all your information is correct")){
-//         var tmp = "sendOrder.php";
-//         tmp += "?name=" + $("input[name='name']").val();
-//         tmp += "&phone=" + $("input[name='phone']").val();
-//         tmp += "&address=" + $("input[name='address']").val();
-//         tmp += "&gender=" + $("select[name='gender']").val();
-//         tmp += "&email=" + $("input[name='email']").val();
-//         window.location.replace(tmp);    
-//     }
-// });
+$("input[name='sentOrder']").click(function(){
+    if(confirm("Please make sure all your information is correct")){
+        $(this).submit();
+    }
+});
 
 $("a[name='remove']").click(function(){
     var bookid = $(this).attr('data');

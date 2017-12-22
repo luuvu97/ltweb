@@ -18,6 +18,8 @@ $(document).ready(function () {
       var firstDigit = Array.from(author.lastChild.innerText)[0];
       if (firstDigit.toUpperCase() === findChar) {
         $(author).removeClass("blur");
+        $("a[name='" + findChar + "']").show();
+
       } else {
         $(author).addClass("blur");
       }

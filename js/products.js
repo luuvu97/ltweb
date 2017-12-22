@@ -12,6 +12,12 @@ $(".product img").click(function () {
   $("#"+$(this).attr('data')).addClass("popup");
 });
 
+$(".product .cart").click(function(){
+  var bookid = $(this).attr('data');
+  var url = "addCart.php?bookid=" + bookid + "&quantity=1";
+  window.open(url, "_self");
+});
+
 //--------------------
 
 $(".product-detail .content .btn").click(function () {

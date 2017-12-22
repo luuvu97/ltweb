@@ -48,18 +48,21 @@
             $query .= "price <= '" .$maxPrice ."'";
             $haveBefore = true;        
         }
-        if($haveBefore == true) $query .= " and ";        
-            $query .= "quantity > 0";
+        // if($haveBefore == true) $query .= " and ";        
+        //     $query .= "quantity > 0";
         if($displayOrder != ""){
             switch($displayOrder){
                 case "priceIncreased":
-                    $query .= " group by bookid order by price asc";
+                    $query .= " order by price asc";
                     break;
                 case "priceDescreased":
-                    $query .= " group by bookid order by price desc";
+                    $query .= " order by price desc";
+                    break;
+                case "new":
+                    $query .= " order by updated desc";
                     break;
                 default:
-                    $query .= " group by bookid order by bookid asc";                
+                    $query .= " order by bookid asc";                
             }
         }
 
@@ -194,7 +197,7 @@
         $display .= "<div class='product " .$sequence_number ."'>";
         $display .= '<img src="data:image/jpeg;base64,' .base64_encode($row["cover"]) .'" data="' .$row["bookid"] .'" alt="' .$row["bookname"] .'"/>';   
         $display .= "<div class='box'>";
-        $display .= "<div class='cart'>Add to Cart</div>";
+        $display .= "<div class='cart' data='" .$bookID ."'>Add to Cart</div>";
         $display .= "<div class='price'>$" .$row['price'] ."</div>";
         $display .= "</div>";
         $display .= "<div class='info'>" .$row['bookname'];

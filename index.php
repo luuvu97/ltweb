@@ -190,7 +190,15 @@
 	</div><!-- Part6 Subscrible -->
 
 	<div class="footer">
-		THIS IS FOOTER
+		<div class="direction">
+			<a href="about.html">About us</a>
+			<a href="#">Home</a>
+			<a href="authors.php">Authors</a>
+			<a href="book_garden.php">Store</a>
+			<a href="facebook.com">Facebook</a>
+			<a href="twitter.com">Twitter</a>
+		</div>
+		<div class="copyright">&copy2017 ibookonline.me</div>
 	</div>
 	
 	<script type="text/javascript" src="js/home.js"></script>

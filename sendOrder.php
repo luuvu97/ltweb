@@ -71,7 +71,7 @@
                 echo "<script>alert('Your request is complete!')</script>";
                 $_SESSION['alreadyOrder'] = true;
             }
-            echo "<script>window.location.replace('index.php');</script>";                
+            echo "<script>window.history.back();</script>";                
         ?>   
     </body>
 </html>

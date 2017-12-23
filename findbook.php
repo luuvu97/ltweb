@@ -28,11 +28,6 @@
             }
             $haveBefore = true;      
         }
-        if($authorName != ""){
-            if($haveBefore == true) $query .= " or ";
-            $query .= "authorname = '" .$authorName ."'";
-            $haveBefore = true;        
-        }
         if($publisherName != ""){
             if($haveBefore == true) $query .= " and ";
             $query .= "publishername = '" .$publisherName ."'";
@@ -46,6 +41,11 @@
         if($maxPrice != ""){
             if($haveBefore == true) $query .= " and ";
             $query .= "price <= '" .$maxPrice ."'";
+            $haveBefore = true;        
+        }
+        if($authorName != ""){
+            if($haveBefore == true) $query .= " or ";
+            $query .= "authorname = '" .$authorName ."'";
             $haveBefore = true;        
         }
         // if($haveBefore == true) $query .= " and ";        
@@ -200,9 +200,7 @@
         $display .= "<div class='cart' data='" .$bookID ."'>Add to Cart</div>";
         $display .= "<div class='price'>$" .$row['price'] ."</div>";
         $display .= "</div>";
-        $display .= "<div class='info'>" .$row['bookname'];
-        $display .= "<br>By: " .$row['authorname'];
-        $display .= "</div></div>";
+        $display .= "</div>";
 
         }  
         return $display;   
@@ -219,13 +217,14 @@
         $display .= "<div id='" .$bookID ."' class='product-detail'>";
         $display .= "<div class='content'>";
         $display .= "<div class='name'>" .$row['bookname'] ."</div>";
-        $display .= "<a href='" .$authorUrl ."' class='author'>By: " .$row['authorname'] ."</a>"; 
-        $display .= "<p>Publisher: " .$row['publishername'] ."</p>";
-        $display .= "<p>Released Day: " .$row['updated'] ."</p>";
-        $display .= "<p>" .$row['quantity'] ." books are available</p>";
+        $display .= "<a href='" .$authorUrl ."' class='author'>By: " .$row['authorname'] ."</a>";
+        $display .= "<table><tr><td>Publisher: " .$row['publishername'] ."</td>";
+        $display .= "<td>Released Day: " .$row['updated'] ."</td></tr>";
+        $display .= "<tr><td cols='2' style='font-style: italic'><small>Note: " .$row['quantity'] ." books are available</small></td></tr>";
+        $display .= "</table>";
         $display .= "<div class='btn' data='btn"  .$bookID ."'>";
         $display .= "<div class='cart'>Add to Cart<div class='bg'></div><span>Add to Cart</span></div>";
-        $display .= "<div class='price'>" .$row['price'] ."<div class='bg'></div><span>$" .$row['price'] ."</span></div>";
+        $display .= "<div class='price'>$" .$row['price'] ."<div class='bg'></div><span>$" .$row['price'] ."</span></div>";
         $display .= "</div>";
         $display .= "<div class='intro'>";
         $display .= "<p style='text-align: left'><b>Introduction:</b></p>";        

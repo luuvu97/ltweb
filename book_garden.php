@@ -34,7 +34,7 @@
         }
 
         $queryResult = executeQuery($bookName, $authorName, $categoryName, $releasedYear, $publisherName, $lowPrice, $maxPrice, $displayOrder);
-    }else $queryResult = executeQuery("", "", "" , "", "", "1000", "1000000", "new");
+    }else $queryResult = executeQuery("", "", "" , "", "", "0.01", "1000", "new");
 ?>
 
 <!DOCTYPE html>
@@ -58,13 +58,13 @@
             $( document ).ready( function() {
                 $( "#searchPriceRange" ).slider({
                 range: true,
-                min: 1000,
-                max: 1000000,
+                min: 0.01,
+                max: 1000.00,
                 
                 <?php
                     if( $flag == false){
-                        $lowPrice = 1000;
-                        $maxPrice = 1000000;
+                        $lowPrice = 0.01;
+                        $maxPrice = 999.01;
                     }else{
                         $lowPrice = $_GET["lowPrice"];
                         $maxPrice = $_GET["maxPrice"];
@@ -118,9 +118,9 @@
                         </select>
                     </div>
                     <div>
-                        Price<br>
-                        <input type="text" id="searchLowPrice" name="lowPrice" readonly style="border:0; color:#f6931f; font-weight:bold; width: 45%; text-align: center"> -
-                        <input type="text" id="searchMaxPrice" name="maxPrice" readonly style="border:0; color:#f6931f; font-weight:bold; width: 45%; text-align: center">
+                        Price($)<br>
+                        <input type="text" id="searchLowPrice" name="lowPrice" value="0.01" readonly style="border:0; color:#f6931f; font-weight:bold; width: 45%; text-align: center"> -
+                        <input type="text" id="searchMaxPrice" name="maxPrice" value="999.01" readonly style="border:0; color:#f6931f; font-weight:bold; width: 45%; text-align: center">
                         <div id="searchPriceRange"></div>
                     </div>
                     <div>Published year<br>
@@ -137,6 +137,7 @@
                         </select>
                     </div>
                     <input class="go" type="submit" value="Go">
+                    <input class="go" type="reset" value="Reset">
                 </div>
 
 
@@ -155,8 +156,10 @@
             <div class="bg-img"><img src="background/book_garden.jpg" alt="Background Image" /></div>
         </header>
 
-    <a name="bookList"></a>
-        <?php echo generatePagination($queryResult); ?>
+        <a name="bookList"></a>
+        <div id="firstPagination">
+            <?php echo generatePagination($queryResult); ?>
+        </div>
         <div class="products-wrapper">
                 <?php displayAns($queryResult); ?>
         </div>
@@ -166,15 +169,24 @@
         <?php displayAnsPopUp($queryResult); ?>
     </div>
     <div class="footer">
-        THIS IS FOOTER
+        <div class="direction">
+            <a href="about.html">About us</a>
+            <a href="index.php">Home</a>
+            <a href="authors.php">Authors</a>
+            <a href="facebook.com">Facebook</a>
+            <a href="twitter.com">Twitter</a>
+        </div>
+        <div class="copyright">&copy2017 ibookonline.me</div>
     </div>
 
-    </div>
+    </div>  
+    <!-- end container -->
 
     
     <script src="js/classie.js"></script>
     <script src="js/header.js"></script>
     <script src="js/products.js"></script>
+    <script src="js/book_garden.js"></script>
 
     <!-- REVERT SEARCH VARIABLE -->
     <script>

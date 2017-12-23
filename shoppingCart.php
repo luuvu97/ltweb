@@ -52,8 +52,7 @@
 <body>
 
 <div class="container">
-    <h2 class="text-center" style="color: #3300FF">SHOPPING CART
-    </h2>           	
+    <h2 class="text-center" style="color: #3300FF">SHOPPING CART</h2>           	
         <table class="table table-condensed table-hover">
     	<tbody>
     		<?php 
@@ -195,7 +194,7 @@
 						<input type="email" name="email" class="form-control" placeholder="Email" required>
 				</div>
 
-			<input type="submit" name="sentOrder" value="Sent" style="max-width: 200px; float: right; margin: 5px; border-bottom: 200px">
+			<input type="submit" name="sentOrder" value="Sent" class="btn btn-success btn-block" style="max-width: 200px; float: right; margin: 5px; border-bottom: 200px">
 			<span id="spnPhoneStatus" style="padding: 100px"></span>
 		</form>
 	</div>
@@ -209,6 +208,18 @@
 			}
 		?>
 	</div>
+
+	<div class="footer" style="width: 100%">
+        <div class="direction">
+            <a href="about.html">About us</a>
+            <a href="index.php">Home</a>
+            <a href="authors.php">Authors</a>
+            <a href="book_garden.php">Store</a>
+            <a href="facebook.com">Facebook</a>
+            <a href="twitter.com">Twitter</a>
+        </div>
+        <div class="copyright">&copy2017 ibookonline.me</div>
+    </div>
     
 	<script src="js/shoppingCart.js"></script>
 

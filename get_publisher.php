@@ -9,7 +9,7 @@
         
         $ans = "";
 
-        $ans .= "<option selected value='all'>Tất cả</option>";
+        $ans .= "<option selected value='all'>All</option>";
         
         while($row != null){
             $ans .= "<option value='" .$row['publishername'] ."'>" .$row['publishername'] ."</option>";

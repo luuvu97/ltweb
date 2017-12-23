@@ -1,3 +1,5 @@
+var changeCart = false;
+
 $("input[name='updateCart']").click(function(){
     var tmp = "";
     var list = document.getElementsByName('quantity');
@@ -15,7 +17,9 @@ $("input[name='updateCart']").click(function(){
 });
 
 $("input[name='emptyCart']").click(function(){
-    window.location.replace('emptyCart.php');
+    if(confirm("Do you want to empty your shopping cart?")){
+        window.location.replace('emptyCart.php');
+    }
 });
 
 $("input[name='newOrder']").click(function(){
@@ -23,6 +27,7 @@ $("input[name='newOrder']").click(function(){
 });  
 
 $("div .add").click(function(){
+    changeCart = true;
     var bookid = $(this).attr('name');
     var tmp = "#quantity" + bookid;
     var temp = $(tmp).attr('data');
@@ -46,6 +51,7 @@ $("div .add").click(function(){
 });
 
 $("div .minus").click(function(){
+    changeCart = true;
     var bookid = $(this).attr('name');
     var tmp = "#quantity" + bookid;
     var lastQuantity = parseInt($(tmp).text());
@@ -68,11 +74,16 @@ $("div .minus").click(function(){
 
 $(document).ready(function(){
     $("div[name='customerInfo']").hide();
+    changeCart = false;
 });
 
 $("input[name='placeOrder']").click(function(){
-    $("div[name='customerInfo']").show();
-    $("input[name='name']").focus();    
+    if(changeCart == true){
+        alert("Maybe something was changed. Please update your order");
+    }else{
+        $("div[name='customerInfo']").show();
+        $("input[name='name']").focus();  
+    }
 });
 
 $("input[name='sentOrder']").click(function(){
@@ -82,6 +93,7 @@ $("input[name='sentOrder']").click(function(){
 });
 
 $("a[name='remove']").click(function(){
+    changeCart = true;
     var bookid = $(this).attr('data');
     var tmp = "#quantity" + bookid;
     var qty = parseInt($(tmp).text());

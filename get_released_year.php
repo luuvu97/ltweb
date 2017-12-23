@@ -3,7 +3,7 @@
         $lastest_year = 1990;
         $current_year = date("Y");
         $ans = "";
-        $ans .= "<option selected value='all'>Tất cả</option>";
+        $ans .= "<option selected value='all'>All</option>";
 
         for($i = $current_year; $i >= 10 * floor($current_year/10); $i--){
             $tmp = 10 * floor($current_year/10);

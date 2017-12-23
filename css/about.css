@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,700');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,700|Lobster');
 
 @font-face {
   font-family: SurveyorDisplay;
@@ -126,6 +126,7 @@ h1 .h1-overlay3 {
 
 /*================================== Canvas 2 ==========================================*/
 #canvas2 {
+  z-index: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -250,7 +251,55 @@ h1 .h1-overlay3 {
   animation: move 1s ease-in-out infinite;
 }
 
+/*=================================== Last Page ============================================*/
+.last-page {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+}
 
+.last-page .logo {
+  text-decoration: none;
+  flex: 0 0 40%;
+  font-size: 7vw;
+  font-family: "Lobster", sans-serif;
+  color: #fff;
+  transition: all .7s ease-in-out;
+  animation: color 17s linear infinite;
+  will-change: transform;
+}
+.last-page .logo:hover {
+  /*color: sandybrown;*/
+  transform: skewX(7deg);
+}
+
+@keyframes color {
+  0%,100% {color:#fff}
+  10% {color: pink}
+  20% {color: hotpink}
+  40% {color: mediumspringgreen}
+  60% {color: lightseagreen}
+  80% {color: hotpink}
+  90% {color: pink}
+}
+
+.last-page .slogan {
+  align-self: start;
+  flex: 0 0 70%;
+  font-size: 4vw;
+  font-family: "Cormorant Garamond", sans-serif;
+  color: #fff;
+  font-style: italic;
+}
 
 
 

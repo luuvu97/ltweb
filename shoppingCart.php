@@ -42,6 +42,7 @@
   	}
   	img{
 		  width: 100%;
+		max-width: 150px;
 	}
 	div input, textarea{
 		width: 100%;

@@ -291,6 +291,12 @@ btn.addEventListener('click', function () {
                             transition2.classList.add("translate");
                             console.log(btn);
                             btn.style.transform = "translate(110%,0)";
+
+                            var lastPage = document.querySelector(".last-page");
+                            lastPage.style.zIndex = "1";
+                            setTimeout(function () {
+                                lastPage.style.opacity = "1";
+                            },1500);
                         }, 1000);
 
                     });

@@ -687,7 +687,7 @@ body {
 .footer {
 	position: relative;
 	background: #222;
-	height: 20vw;
+	height: 12vw;
 	max-height: 200px;
 	color: #fff;
 	font-family: "Cormorant Garamond", cursive;
@@ -700,7 +700,7 @@ body {
 	display: flex;
 	justify-content: space-evenly;
 	font-family: "Josefin Slab", cursive;
-	font-size: 2vw;
+	font-size: 1.7vw;
 	font-weight: bolder;
   }
   .footer .direction a {

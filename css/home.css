@@ -824,7 +824,7 @@ label a:hover {
 .footer {
   position: relative;
   background: #222;
-  height: 20vw;
+  height: 12vw;
   color: #fff;
   font-family: "Cormorant Garamond", cursive;
   display: flex;
@@ -836,7 +836,7 @@ label a:hover {
   display: flex;
   justify-content: space-evenly;
   font-family: "Josefin Slab", cursive;
-  font-size: 2vw;
+  font-size: 1.7vw;
   font-weight: bolder;
 }
 .footer .direction a {
@@ -844,7 +844,7 @@ label a:hover {
   text-decoration: none;
   border-bottom: white dotted 4px;
   color: #fff;
-  border-radius: 5px ;
+  /* border-radius: 5px ; */
   transition: all .7s;
 }
 .footer .direction a:hover {

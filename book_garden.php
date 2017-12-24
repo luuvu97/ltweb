@@ -128,6 +128,7 @@
                             <?php echo get_released_year(); ?>
                         </select>
                     </div>
+<<<<<<< HEAD
                     <div>Sort by<br>
                         <select name="searchDisplayOrder" id="searchDisplayOrder">
                             <option value="new">Newest</option>
@@ -138,6 +139,9 @@
                     </div>
                     <input class="go" type="submit" value="Go">
                     <input class="go" type="reset" value="Reset">
+=======
+                    <input class="go" type="submit" value="Go" style="">
+>>>>>>> Hoang
                 </div>
 
 
@@ -146,7 +150,11 @@
                 </div>
 
                 <div class="search-box">
+<<<<<<< HEAD
                     <input id="searchSearch" type="text" name="search" placeholder="search anything ... ">
+=======
+                    <input type="text" name="search" placeholder="search anything ... ">
+>>>>>>> Hoang
 
                     <div></div>
                 </div>

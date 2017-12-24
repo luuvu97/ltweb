@@ -3,7 +3,12 @@
     require_once('define_variable.php');
 
     $link = mysqli_connect(HOST, USERNAME, PASSWORD, DBNAME) or die("Cannot connect to database");
+<<<<<<< HEAD
     $query = "select authorname, avatar, bio from author order by authorname asc";
+=======
+mysqli_set_charset($link,"utf8");
+    $query = "select authorname, avatar, bio from author";
+>>>>>>> Hoang
     $result = mysqli_query($link, $query);
 
     $display = "";

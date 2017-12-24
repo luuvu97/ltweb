@@ -86,7 +86,6 @@
     }
 
     function displayAns($ans){
-<<<<<<< HEAD
         if($ans != null){
             $records_per_page = RECORDS_PER_PAGE;
             $total_num = count($ans);
@@ -94,20 +93,10 @@
             if(isset($_GET['page'])){
                 $page = $_GET['page'] - 1;
             }else{
-=======
-        if ($ans != null){
-            $records_per_page = RECORDS_PER_PAGE;
-            $total_num = count($ans);
-            $num_of_page = ceil($total_num / $records_per_page);
-            if (isset($_GET['page'])) {
-                $page = $_GET['page'] - 1;
-            } else {
->>>>>>> Hoang
                 $page = 0;
                 $_GET['searchResult'] = $ans;
             }
             $num_of_records = RECORDS_PER_PAGE;
-<<<<<<< HEAD
             if($page == $num_of_page - 1){
                 $num_of_records = $total_num - $page * RECORDS_PER_PAGE;
             }
@@ -122,20 +111,6 @@
         }else{
             echo "<h2>No result</h2>";
         }
-=======
-            if ($page == $num_of_page - 1) {
-                $num_of_records = $total_num % RECORDS_PER_PAGE;
-            }
-
-            $tmp = ceil($num_of_records / 2);
-            echo "<div class='products-layout' style='grid-template-rows: repeat(" . ceil($num_of_records / 2) . ", 1fr 4fr 1fr);'>";
-
-            for ($i = $page * $records_per_page; $i < $total_num && $i < ($page + 1) * $records_per_page; $i++) {
-                echo displayBook($ans[$i], $i);
-            }
-            echo "</div>";
-        }else echo "<h2>No result</h2>";
->>>>>>> Hoang
         
     }
 
@@ -228,16 +203,10 @@
         $display .= "<div class='product " .$sequence_number ."'>";
         $display .= '<img src="data:image/jpeg;base64,' .base64_encode($row["cover"]) .'" data="' .$row["bookid"] .'" alt="' .$row["bookname"] .'"/>';   
         $display .= "<div class='box'>";
-<<<<<<< HEAD
         $display .= "<div class='cart' data='" .$bookID ."'>Add to Cart</div>";
         $display .= "<div class='price'>$" .$row['price'] ."</div>";
         $display .= "</div>";
         $display .= "</div>";
-=======
-        $display .= "<div class='cart'>Add to Cart</div>";
-        $display .= "<div class='price'>$" .$row['price']/10000 ."</div>";
-        $display .= "</div></div>";
->>>>>>> Hoang
 
         }  
         return $display;   
@@ -254,7 +223,6 @@
         $display .= "<div id='" .$bookID ."' class='product-detail'>";
         $display .= "<div class='content'>";
         $display .= "<div class='name'>" .$row['bookname'] ."</div>";
-<<<<<<< HEAD
         $display .= "<a href='" .$authorUrl ."' class='author'>By: " .$row['authorname'] ."</a>";
         $display .= "<table><tr><td>Publisher: " .$row['publishername'] ."</td>";
         $display .= "<td>Released Day: " .$row['updated'] ."</td></tr>";
@@ -263,12 +231,6 @@
         $display .= "<div class='btn' data='btn"  .$bookID ."'>";
         $display .= "<div class='cart'>Add to Cart<div class='bg'></div><span>Add to Cart</span></div>";
         $display .= "<div class='price'>$" .$row['price'] ."<div class='bg'></div><span>$" .$row['price'] ."</span></div>";
-=======
-        $display .= "<a href='#' class='author'>by: " .$row['authorname'] ."</a>";
-        $display .= "<div class='btn'>";
-        $display .= "<div class='cart'>Add to Cart<div class='bg'></div><span>Add to Cart</span></div>";
-        $display .= "<div class='price'>$" .$row['price']/10000 ."<div class='bg'></div><span>$" .$row['price']/10000 ."</span></div>";
->>>>>>> Hoang
         $display .= "</div>";
         $display .= "<div class='intro'>";
         $display .= "<p style='text-align: left'><b>Introduction:</b></p>";        

@@ -4,6 +4,7 @@
     function executeQuery($bookName, $authorName, $categoryName, $releaseYear, $publisherName, $lowPrice, $maxPrice, $displayOrder){
 
         $link = mysqli_connect(HOST, USERNAME, PASSWORD, DBNAME) or die("Cannot connect to database");
+        mysqli_set_charset($link,"utf8");
         $query = "select bookid from book_brief_view where ";
         $haveBefore = false;    
 
@@ -11,6 +12,11 @@
 
         if($bookName != ""){
             $query .= "bookname like '%" .$bookName ."%'";
+            $haveBefore = true;
+        }
+        if($authorName != ""){
+            if($haveBefore == true) $query .= " or ";
+            $query .= "authorname = '" .$authorName ."'";
             $haveBefore = true;
         }
         if($categoryName != ""){
@@ -248,7 +254,7 @@
         $display = "<div class='w3-padding-32'>";
         $display .= "<img src='" .$row['cover'] ."' class='w3-image' style='display:block;margin:auto' width='600' height='400' alt='" .$row['bookname'] ."' />";
         $display .= "<h3>" .$row['bookname'] ."</h3>";
-        $display .= "<i>Giá: " .$row['price'] ."</i><br>";        
+        $display .= "<i>Giá: " .$row['price']/10000 ."</i><br>";
         $display .= "Tác giả: " .$row['authorname'] ."<br>";
         $display .= "Danh mục: " .$row['categoryname'] ."<br>";
         $display .= "<span class='bookIntroduct'>";

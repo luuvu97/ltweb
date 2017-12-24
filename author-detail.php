@@ -7,7 +7,8 @@
         require_once('findbook.php');
         require_once('define_variable.php');
 
-        $link = mysqli_connect(HOST, USERNAME, PASSWORD, DBNAME) or die("Cannot connect to database");                
+        $link = mysqli_connect(HOST, USERNAME, PASSWORD, DBNAME) or die("Cannot connect to database");
+        mysqli_set_charset($link,"utf8");
         $query = "select * from author where authorname='" .$_GET['name'] ."'";
         $result = mysqli_query($link, $query);
 

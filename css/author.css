@@ -87,12 +87,12 @@ a {
 .info-container .info > * {
   margin: 0 10%;
   font-family: "Tangerine", serif;
-  font-size: 2.1vw;
+  font-size: 1.9vw;
 }
 .info-container .info .story {
   grid-area: story;
   font-family: "Dancing Script", serif;
-  line-height: 3.7vw;
+  line-height: 2.7vw;
   align-self: flex-end;
 }
 .info-container .info .year {

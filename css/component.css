@@ -187,7 +187,7 @@ body {
 
 .filter-form.reveal {
 	opacity: 1;
-	height: 7vw;
+	height: 12vw;
 }
 
 .filter-form .go {
@@ -380,7 +380,7 @@ body {
 	transition: transform .7s linear;
 }
 .products-wrapper.down {
-	transform: translateY(200px);
+	transform: translateY(300px);
 }
 
 .products-layout {

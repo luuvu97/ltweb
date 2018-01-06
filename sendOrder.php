@@ -6,9 +6,9 @@
     session_start();
     $list = $_SESSION['cart'];
 
-    $name = $_GET['name'];
+    $name = addslashes(strtoupper($_GET['name']));
     $phone = $_GET['phone'];
-    $addr = $_GET['address'];
+    $addr = addslashed(strtoupper($_GET['address']));
     $gender = $_GET['gender'];
     $email = $_GET['email'];
 

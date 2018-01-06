@@ -42,11 +42,11 @@ $("div .add").click(function(){
         var price = parseFloat($(tmp).text());
         var amount = price * newQuantity;
         tmp = "#amount" + bookid;
-        $(tmp).text(amount);
+        $(tmp).text(amount.toFixed(2));
         tmp = "#total";
         var lastTotal = parseFloat($(tmp).text());
         var newToatl = lastTotal + price;
-        $(tmp).text(newToatl);
+        $(tmp).text(newToatl.toFixed(2));
     }
 });
 
@@ -64,11 +64,11 @@ $("div .minus").click(function(){
         var price = parseFloat($(tmp).text());
         var amount = price * newQuantity;
         tmp = "#amount" + bookid;
-        $(tmp).text(amount);
+        $(tmp).text(amount.toFixed(2));
         tmp = "#total";
         var lastTotal = parseFloat($(tmp).text());
         var newToatl = lastTotal - price;
-        $(tmp).text(newToatl);
+        $(tmp).text(newToatl.toFixed(2));
     }
 });
 

@@ -10,13 +10,14 @@
 	<link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="http://www.shareicon.net/data/128x128/2016/09/30/837652_seal_512x512.png">
 
 	<title>Home Page</title>
 </head>
 <body onscroll="myFunction()">
 	<header class="v-header">
 
-		<video id="bg--position" autoplay poster="backgound/pre-home-background.jpg" playsinline loop>
+		<video id="bg--position" autoplay poster="background/pre-home-background.jpg" playsinline loop>
 			<source src="background/TheJoyofBooks.mp4" type="video/mp4">
 		</video>
 		<div class="header-overlay"></div>

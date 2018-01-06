@@ -13,14 +13,14 @@
     $firstChar = "A";
     $lastChar = "";
     while(($row = mysqli_fetch_array($result)) != null){
-        if($firstChar == "A" && $lastChar == ""){
-          $lastChar = $firstChar;
-          $display .= "<a name='" .$firstChar ."'></a>";
-        }
-        if($firstChar != strtoupper(substr($row['authorname'], 0, 1))){
-          $firstChar = chr(ord(strtoupper(substr($row['authorname'], 0, 1))));
-          $display .= "<a name='" .$firstChar ."'></a>";
-        }
+        // if($firstChar == "A" && $lastChar == ""){
+        //   $lastChar = $firstChar;
+        //   $display .= "<a name='" .$firstChar ."'></a>";
+        // }
+        // if($firstChar != strtoupper(substr($row['authorname'], 0, 1))){
+        //   $firstChar = chr(ord(strtoupper(substr($row['authorname'], 0, 1))));
+        //   $display .= "<a name='" .$firstChar ."'></a>";
+        // }
        
         $display .= "<div class='author' data='abc'>";
         $display .= '<img src="data:image/jpeg;base64,' .base64_encode($row["avatar"]) .'" alt="' .$row["authorname"] .'"/>';
@@ -43,6 +43,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/authors.css">
+  <link rel="icon" href="http://www.shareicon.net/data/128x128/2016/09/30/837652_seal_512x512.png">
   <script src="js/authors.js"></script>
   <title>Authors</title>
 

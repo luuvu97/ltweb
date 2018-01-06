@@ -32,7 +32,7 @@
     $row = mysqli_fetch_array($result);
     $orderID = $row['0'] + 1;
 
-    $query = "insert into orderbook(paidstat, shipstat, orderdate, shipdate, userid) values('0', '0','" .date('Y/m/d') ."','0-0-0','" .$customerID ."');";
+    $query = "insert into orderbook(paidstat, shipstat, orderdate, shipdate, userid, amount) values('0', '0','" .date('Y/m/d') ."','0-0-0','" .$customerID ."', 0);";
     $result = mysqli_query($link, $query);
 
     foreach($list as $key => $value){
@@ -57,7 +57,7 @@
     $row = mysqli_fetch_array($result);
     $total = $row['sum(cost)'];
     
-    $query = "update orderbook set total='" .$total ."' where id='" .$orderID ."';";
+    $query = "update orderbook set amount='" .$total ."' where id='" .$orderID ."';";
     $result = mysqli_query($link, $query);
 
 ?>
